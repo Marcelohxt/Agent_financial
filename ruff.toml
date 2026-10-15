@@ -1,0 +1,8 @@
+target-version = "py312"
+line-length = 100
+# Migrações são geradas pelo Django; não vale a pena lintar.
+extend-exclude = ["*/migrations/*"]
+
+[lint]
+# Listas em Meta/admin do Django são padrão do framework, não bug.
+ignore = ["RUF012"]

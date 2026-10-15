@@ -1,0 +1,27 @@
+# Ambiente virtual
+.venv/
+venv/
+
+# Segredos e configuração local (nunca versionar)
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Django
+*.log
+media/
+staticfiles/
+db.sqlite3
+
+# Editores e sistema
+.vscode/settings.json
+.idea/
+Thumbs.db
+.DS_Store

@@ -1,0 +1,12 @@
+# Dependências do Agent_financial (Fase 2 - esqueleto do MVP)
+# Instalar com a .venv ativa:  pip install -r requirements.txt
+
+# --- Aplicação ---
+Django>=5.2,<5.3            # framework web; 5.2 é LTS (suporte até abril de 2028)
+psycopg[binary]>=3.2,<4     # driver do PostgreSQL para o Django
+django-environ>=0.12,<1     # lê configurações e segredos do arquivo .env (fora do Git)
+
+# --- Testes e qualidade ---
+pytest>=8,<10               # executor de testes
+pytest-django>=4.9,<5       # integra o pytest com o Django
+ruff>=0.6,<1                # linter e formatador de código
