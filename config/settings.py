@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'core',
     'accounts',
     'payables',
+    'whatsapp',
 ]
 
 MIDDLEWARE = [
@@ -127,6 +128,12 @@ STATIC_URL = 'static/'
 # Arquivos enviados (PDFs). Ficam fora do Git; em produção vão para armazenamento externo.
 MEDIA_URL = 'media/'
 MEDIA_ROOT = env('MEDIA_ROOT', default=str(BASE_DIR / 'media'))
+
+# WhatsApp Cloud API. Sem APP_SECRET, o webhook recusa toda mensagem (falha fechada).
+WHATSAPP_APP_SECRET = env('WHATSAPP_APP_SECRET', default='')
+WHATSAPP_VERIFY_TOKEN = env('WHATSAPP_VERIFY_TOKEN', default='')
+WHATSAPP_ACCESS_TOKEN = env('WHATSAPP_ACCESS_TOKEN', default='')
+WHATSAPP_PHONE_NUMBER_ID = env('WHATSAPP_PHONE_NUMBER_ID', default='')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
